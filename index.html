@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心糖vlog_御梦子与JK柚子的日常影像笔记 | 甜系生活频道</title>
+<meta name="description" content="心糖vlog 是御梦子主理的甜系生活影像频道，记录 JK 柚子般的青春日常、城市漫游与温柔瞬间，陪伴每一位热爱生活的观众。">
+<style>
+:root{
+  --pink:#ff8fb1;
+  --pink-soft:#ffd3e0;
+  --pink-deep:#e85d87;
+  --mint:#9fe3d0;
+  --mint-deep:#3fbfa1;
+  --cream:#fff8f3;
+  --ink:#372a30;
+  --ink-soft:#6d5b63;
+  --line:#f2dde4;
+  --card:#ffffff;
+  --shadow:0 18px 40px -22px rgba(232,93,135,.45);
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.wrap{width:min(1180px,92vw);margin:0 auto;}
+
+/* ---------- 顶部导航 ---------- */
+.topbar{
+  position:sticky;top:0;z-index:80;
+  background:rgba(255,248,243,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:1.2rem;letter-spacing:.5px;
+}
+.logo .dot{
+  width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,#fff,#ff8fb1 60%,#e85d87);
+  box-shadow:0 6px 16px -6px rgba(232,93,135,.9);
+  position:relative;
+}
+.logo .dot::after{
+  content:"";position:absolute;inset:9px;
+  border-radius:50%;
+  background:rgba(255,255,255,.75);
+  transform:scale(.42);
+}
+.logo span b{color:var(--pink-deep);}
+.nav-links{display:flex;gap:30px;font-size:.95rem;color:var(--ink-soft);}
+.nav-links a{position:relative;padding:6px 0;transition:color .25s;}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--pink);border-radius:2px;transition:width .28s;
+}
+.nav-links a:hover{color:var(--pink-deep);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{
+  background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+  color:#fff;padding:10px 22px;border-radius:999px;
+  font-size:.9rem;font-weight:600;
+  box-shadow:0 10px 22px -12px rgba(232,93,135,.95);
+  transition:transform .25s,box-shadow .25s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(232,93,135,.95);}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.burger i{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s;}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  padding:78px 0 90px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;
+  width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,211,224,.85),rgba(255,211,224,0) 68%);
+  top:-220px;right:-140px;z-index:0;
+}
+.hero::after{
+  content:"";position:absolute;
+  width:460px;height:460px;border-radius:50%;
+  background:radial-gradient(circle,rgba(159,227,208,.62),rgba(159,227,208,0) 70%);
+  bottom:-200px;left:-150px;z-index:0;
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;border:1px solid var(--line);
+  padding:7px 16px;border-radius:999px;
+  font-size:.82rem;color:var(--pink-deep);font-weight:600;
+  box-shadow:0 8px 20px -16px rgba(232,93,135,.9);
+}
+.eyebrow em{
+  width:8px;height:8px;border-radius:50%;background:var(--pink);
+  font-style:normal;animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(1.6);opacity:.45;}
+}
+h1{
+  font-size:clamp(2.2rem,4.4vw,3.5rem);
+  line-height:1.22;letter-spacing:-.5px;
+  margin:22px 0 20px;font-weight:900;
+}
+h1 .grad{
+  background:linear-gradient(120deg,var(--pink-deep),#ff9ec2 42%,var(--mint-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{
+  font-size:1.03rem;color:var(--ink-soft);max-width:520px;
+}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+.btn-primary{
+  background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+  color:#fff;padding:14px 30px;border-radius:999px;font-weight:700;
+  box-shadow:0 18px 34px -18px rgba(232,93,135,.95);
+  transition:transform .25s,box-shadow .25s;
+  display:inline-flex;align-items:center;gap:9px;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 24px 42px -18px rgba(232,93,135,.95);}
+.btn-ghost{
+  border:1.5px solid var(--line);background:#fff;
+  padding:14px 28px;border-radius:999px;font-weight:600;color:var(--ink);
+  transition:border-color .25s,color .25s,transform .25s;
+}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink-deep);transform:translateY(-3px);}
+.hero-stats{
+  display:flex;gap:38px;margin-top:44px;flex-wrap:wrap;
+}
+.stat b{
+  display:block;font-size:1.55rem;font-weight:900;color:var(--pink-deep);
+  letter-spacing:-.5px;
+}
+.stat span{font-size:.83rem;color:var(--ink-soft);letter-spacing:.4px;}
+
+/* hero 画面卡 */
+.hero-visual{position:relative;}
+.player-card{
+  position:relative;border-radius:26px;overflow:hidden;
+  background:linear-gradient(160deg,#ffd3e0,#ffb4cb 45%,#9fe3d0);
+  box-shadow:0 40px 70px -38px rgba(232,93,135,.85);
+  aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;
+}
+.player-card::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 20%,rgba(255,255,255,.55),transparent 46%),
+    radial-gradient(circle at 16% 88%,rgba(255,255,255,.4),transparent 50%);
+}
+.play-btn{
+  position:relative;z-index:3;
+  width:88px;height:88px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  display:grid;place-items:center;
+  box-shadow:0 18px 36px -16px rgba(55,42,48,.55);
+  transition:transform .3s;
+}
+.play-btn:hover{transform:scale(1.08);}
+.play-btn svg{width:30px;height:30px;margin-left:5px;fill:var(--pink-deep);}
+.player-tag{
+  position:absolute;z-index:4;top:18px;left:18px;
+  background:rgba(255,255,255,.9);
+  padding:6px 14px;border-radius:999px;font-size:.76rem;font-weight:700;
+  color:var(--pink-deep);letter-spacing:.5px;
+}
+.player-meta{
+  position:absolute;z-index:4;left:18px;right:18px;bottom:18px;
+  background:rgba(55,42,48,.55);backdrop-filter:blur(8px);
+  border-radius:16px;padding:14px 16px;color:#fff;
+}
+.player-meta strong{display:block;font-size:.95rem;}
+.player-meta small{opacity:.82;font-size:.76rem;}
+.float-chip{
+  position:absolute;z-index:5;background:#fff;border-radius:16px;
+  padding:12px 16px;box-shadow:var(--shadow);
+  font-size:.82rem;font-weight:700;
+}
+.chip-a{top:-18px;right:-14px;color:var(--mint-deep);}
+.chip-b{bottom:64px;left:-26px;color:var(--pink-deep);}
+.chip-a span,.chip-b span{display:block;font-size:.7rem;color:var(--ink-soft);font-weight:500;}
+
+/* ---------- 跑马灯 ---------- */
+.marquee{
+  background:linear-gradient(90deg,var(--pink-deep),#ff9ec2 50%,var(--mint-deep));
+  color:#fff;padding:14px 0;overflow:hidden;
+  font-size:.9rem;font-weight:600;letter-spacing:.6px;
+}
+.marquee-track{
+  display:flex;gap:48px;white-space:nowrap;width:max-content;
+  animation:scrollx 26s linear infinite;
+}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee-track span{display:inline-flex;align-items:center;gap:12px;}
+.marquee-track span::before{content:"✦";opacity:.8;}
+@keyframes scrollx{to{transform:translateX(-50%);}}
+
+/* ---------- 通用 section ---------- */
+section{padding:88px 0;}
+.sec-head{max-width:660px;margin-bottom:52px;}
+.sec-label{
+  display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:2px;
+  color:var(--mint-deep);text-transform:uppercase;margin-bottom:14px;
+}
+.sec-label::before{content:"/ ";}
+h2{
+  font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;line-height:1.3;
+  letter-spacing:-.4px;
+}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:.98rem;}
+
+/* ---------- 关于御梦子 ---------- */
+.about{background:#fff;border-radius:0;}
+.about-grid{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;
+}
+.portrait{
+  position:relative;border-radius:28px;overflow:hidden;
+  aspect-ratio:5/6;
+  background:linear-gradient(150deg,#ffe6ee,#ffc7da 55%,#c6f0e6);
+  box-shadow:0 40px 70px -40px rgba(232,93,135,.8);
+}
+.portrait svg{position:absolute;inset:0;width:100%;height:100%;}
+.portrait-note{
+  position:absolute;left:18px;bottom:18px;z-index:4;
+  background:rgba(255,255,255,.92);border-radius:16px;
+  padding:12px 18px;box-shadow:var(--shadow);max-width:78%;
+}
+.portrait-note b{display:block;font-size:.9rem;color:var(--pink-deep);}
+.portrait-note small{font-size:.75rem;color:var(--ink-soft);}
+.about-body p{color:var(--ink-soft);margin-bottom:18px;}
+.about-body p strong{color:var(--ink);font-weight:700;}
+.fact-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;}
+.fact{
+  background:var(--cream);border:1px solid var(--line);
+  border-radius:16px;padding:16px 18px;
+}
+.fact b{display:block;font-size:1.1rem;color:var(--pink-deep);font-weight:900;}
+.fact span{font-size:.78rem;color:var(--ink-soft);}
+
+/* ---------- 最新视频 ---------- */
+.videos{background:linear-gradient(180deg,var(--cream),#fff);}
+.video-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+}
+.vcard{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 22px 44px -34px rgba(232,93,135,.65);
+  transition:transform .3s,box-shadow .3s;
+  display:flex;flex-direction:column;
+}
+.vcard:hover{transform:translateY(-8px);box-shadow:0 34px 56px -32px rgba(232,93,135,.75);}
+.thumb{
+  position:relative;aspect-ratio:16/10;overflow:hidden;
+  display:grid;place-items:center;
+}
+.thumb svg{position:absolute;inset:0;width:100%;height:100%;}
+.thumb .dur{
+  position:absolute;right:10px;bottom:10px;z-index:4;
+  background:rgba(55,42,48,.7);color:#fff;font-size:.7rem;
+  padding:3px 9px;border-radius:8px;letter-spacing:.4px;
+}
+.thumb .mini-play{
+  position:relative;z-index:3;
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.85);display:grid;place-items:center;
+  transition:transform .3s;
+}
+.vcard:hover .mini-play{transform:scale(1.12);}
+.thumb .mini-play svg{position:static;width:16px;height:16px;fill:var(--pink-deep);margin-left:3px;}
+.vbody{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;}
+.vtag{
+  font-size:.72rem;font-weight:800;letter-spacing:1px;
+  color:var(--mint-deep);margin-bottom:9px;
+}
+.vbody h3{font-size:1.05rem;font-weight:800;line-height:1.5;margin-bottom:10px;}
+.vbody p{font-size:.86rem;color:var(--ink-soft);flex:1;}
+.vfoot{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);
+  font-size:.76rem;color:var(--ink-soft);
+}
+.vfoot .views{color:var(--pink-deep);font-weight:700;}
+
+/* ---------- 栏目矩阵 ---------- */
+.columns{background:#fff;}
+.col-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+}
+.col-card{
+  border-radius:20px;padding:28px 24px;position:relative;overflow:hidden;
+  border:1px solid var(--line);
+  transition:transform .3s,border-color .3s;
+  background:var(--cream);
+}
+.col-card:hover{transform:translateY(-6px);border-color:var(--pink-soft);}
+.col-card .num{
+  font-size:2.4rem;font-weight:900;color:var(--pink-soft);
+  line-height:1;letter-spacing:-2px;
+}
+.col-card h3{font-size:1.05rem;margin:14px 0 10px;font-weight:800;}
+.col-card p{font-size:.84rem;color:var(--ink-soft);}
+.col-card .ic{
+  position:absolute;right:18px;top:18px;width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--pink-soft),#fff);
+}
+.col-card .ic svg{width:20px;height:20px;fill:var(--pink-deep);}
+
+/* ---------- 数据带 ---------- */
+.stats-band{
+  background:linear-gradient(120deg,#ffe9f0,#fff6f1 45%,#e6faf4);
+  padding:70px 0;
+}
+.stats-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;
+}
+.stats-inner .s b{
+  display:block;font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:900;
+  color:var(--pink-deep);letter-spacing:-1px;line-height:1.1;
+}
+.stats-inner .s span{font-size:.82rem;color:var(--ink-soft);}
+
+/* ---------- 社区留言 ---------- */
+.community{background:linear-gradient(180deg,#fff,var(--cream));}
+.cmt-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.cmt{
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:24px;display:flex;flex-direction:column;gap:14px;
+  transition:transform .3s,box-shadow .3s;
+}
+.cmt:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.cmt-top{display:flex;align-items:center;gap:12px;}
+.avatar{
+  width:44px;height:44px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-weight:900;color:#fff;font-size:.9rem;
+  letter-spacing:.5px;
+}
+.cmt-top b{font-size:.9rem;display:block;}
+.cmt-top small{font-size:.72rem;color:var(--ink-soft);}
+.cmt p{font-size:.88rem;color:var(--ink-soft);}
+.cmt .likes{
+  font-size:.75rem;color:var(--pink-deep);font-weight:700;
+  display:flex;align-items:center;gap:6px;
+}
+.cmt .likes svg{width:14px;height:14px;fill:var(--pink);}
+
+/* ---------- 订阅 ---------- */
+.subscribe{padding:0 0 88px;}
+.sub-box{
+  position:relative;overflow:hidden;
+  border-radius:32px;
+  background:linear-gradient(130deg,#ffb4cb,#ff8fb1 40%,#9fe3d0);
+  padding:64px 56px;color:#fff;text-align:center;
+  box-shadow:0 44px 80px -46px rgba(232,93,135,.95);
+}
+.sub-box::before{
+  content:"";position:absolute;width:320px;height:320px;border-radius:50%;
+  background:rgba(255,255,255,.18);top:-140px;left:-80px;
+}
+.sub-box::after{
+  content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+  background:rgba(255,255,255,.14);bottom:-120px;right:-60px;
+}
+.sub-box > *{position:relative;z-index:2;}
+.sub-box h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);}
+.sub-box p{margin:16px auto 32px;max-width:520px;opacity:.94;font-size:.96rem;}
+.sub-form{
+  display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap;
+}
+.sub-form input{
+  flex:1;min-width:200px;border:none;border-radius:999px;
+  padding:15px 24px;font-size:.92rem;outline:none;
+  font-family:inherit;color:var(--ink);
+}
+.sub-form input:focus{box-shadow:0 0 0 3px rgba(255,255,255,.6);}
+.sub-form button{
+  background:var(--ink);color:#fff;padding:15px 32px;border-radius:999px;
+  font-weight:700;font-size:.92rem;
+  transition:transform .25s,background .25s;
+}
+.sub-form button:hover{transform:translateY(-2px);background:#241a1f;}
+.sub-hint{
+  margin-top:18px;font-size:.76rem;opacity:.85;
+}
+.sub-msg{
+  margin-top:16px;font-size:.85rem;font-weight:700;min-height:1.2em;
+}
+
+/* ---------- 页脚 ---------- */
+footer{
+  background:#2b2126;color:#e9dde2;padding:66px 0 30px;
+}
+.foot-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;
+}
+.foot-brand .logo{color:#fff;margin-bottom:18px;}
+.foot-brand .logo span b{color:var(--pink-soft);}
+.foot-brand p{font-size:.86rem;color:#b8a6ae;max-width:320px;}
+.socials{display:flex;gap:12px;margin-top:22px;}
+.socials a{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.08);display:grid;place-items:center;
+  transition:background .25s,transform .25s;
+}
+.socials a:hover{background:var(--pink-deep);transform:translateY(-3px);}
+.socials svg{width:17px;height:17px;fill:#fff;}
+.fcol h4{font-size:.88rem;margin-bottom:18px;color:#fff;font-weight:800;letter-spacing:.5px;}
+.fcol a{display:block;font-size:.83rem;color:#b8a6ae;margin-bottom:11px;transition:color .2s;}
+.fcol a:hover{color:var(--pink-soft);}
+.foot-bottom{
+  margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-size:.78rem;color:#93838c;
+}
+
+/* ---------- 滚动显现 ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.on{opacity:1;transform:none;}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px;}
+  .hero-visual{max-width:420px;margin:0 auto;width:100%;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .portrait{max-width:400px;margin:0 auto;}
+  .video-grid{grid-template-columns:1fr 1fr;}
+  .col-grid{grid-template-columns:1fr 1fr;}
+  .stats-inner{grid-template-columns:1fr 1fr;gap:34px;}
+  .cmt-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px;}
+}
+@media(max-width:720px){
+  .nav-links{display:none;}
+  .burger{display:flex;}
+  .nav-links.open{
+    display:flex;position:absolute;top:72px;left:0;right:0;
+    flex-direction:column;background:#fff;padding:22px 6vw;gap:18px;
+    border-bottom:1px solid var(--line);box-shadow:0 20px 30px -24px rgba(0,0,0,.4);
+  }
+  section{padding:64px 0;}
+  .video-grid{grid-template-columns:1fr;}
+  .col-grid{grid-template-columns:1fr;}
+  .sub-box{padding:44px 24px;border-radius:24px;}
+  .fact-list{grid-template-columns:1fr;}
+  .hero-stats{gap:24px;}
+  .chip-b{left:-8px;}
+  .chip-a{right:-4px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ======= 导航 ======= -->
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <i class="dot"></i>
+      <span>心糖<b>vlog</b></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">关于御梦子</a>
+      <a href="#videos">最新影像</a>
+      <a href="#columns">栏目矩阵</a>
+      <a href="#community">社区留言</a>
+      <a href="#subscribe">订阅</a>
+    </nav>
+    <a class="nav-cta" href="#subscribe">加入心糖</a>
+    <button class="burger" id="burger" aria-label="展开菜单">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ======= Hero ======= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><em></em>甜系生活影像 · 每周更新</span>
+      <h1><span class="grad">心糖vlog</span><br>御梦子与JK柚子的日常漫游</h1>
+      <p class="hero-lead">
+        一档关于青春、城市与微小确幸的视频日记。御梦子用镜头把 JK 柚子般青涩又清甜的日子收进画面，
+        记录散步、探店、换装与四季光影，让每个普通的工作日都值得被按下录制键。
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#videos">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          观看最新一集
+        </a>
+        <a class="btn-ghost" href="#about">认识创作者</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>128万</b><span>频道订阅</span></div>
+        <div class="stat"><b>460+</b><span>原创视频</span></div>
+        <div class="stat"><b>3.2亿</b><span>累计播放</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="float-chip chip-a">本周新更<span>EP.214 城市散步</span></div>
+      <div class="float-chip chip-b">4K HDR<span>甜系调色</span></div>
+      <div class="player-card">
+        <span class="player-tag">正在播放</span>
+        <button class="play-btn" aria-label="播放预告片">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="player-meta">
+          <strong>JK 柚子味的夏日午后</strong>
+          <small>御梦子 · 18:42 · 4K 60fps</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 跑马灯 ======= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>御梦子</span><span>心糖vlog</span><span>JK 柚子</span><span>甜系日常</span>
+    <span>城市漫游</span><span>换装记录</span><span>四季光影</span><span>社区共创</span>
+    <span>御梦子</span><span>心糖vlog</span><span>JK 柚子</span><span>甜系日常</span>
+    <span>城市漫游</span><span>换装记录</span><span>四季光影</span><span>社区共创</span>
+  </div>
+</div>
+
+<!-- ======= 关于 ======= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait reveal">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff1f5"/>
+            <stop offset=".55" stop-color="#ffc7da"/>
+            <stop offset="1" stop-color="#c6f0e6"/>
+          </linearGradient>
+          <linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity=".1"/>
+          </linearGradient>
+        </defs>
+        <rect width="500" height="600" fill="url(#pg)"/>
+        <circle cx="120" cy="120" r="90" fill="#ffffff" opacity=".35"/>
+        <circle cx="410" cy="470" r="120" fill="#ffffff" opacity=".28"/>
+        <circle cx="250" cy="250" r="96" fill="#ffb4cb" opacity=".55"/>
+        <path d="M250 190c-46 0-82 34-82 82 0 40 26 72 58 82l-6 66h60l-6-66c32-10 58-42 58-82 0-48-36-82-82-82z" fill="#ffffff" opacity=".78"/>
+        <circle cx="218" cy="262" r="7" fill="#e85d87"/>
+        <circle cx="282" cy="262" r="7" fill="#e85d87"/>
+        <path d="M232 296c12 12 24 12 36 0" stroke="#e85d87" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <path d="M150 420c30-34 70-48 100-48s70 14 100 48" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none" opacity=".85"/>
+        <rect x="0" y="0" width="500" height="600" fill="url(#pg2)" opacity=".18"/>
+        <g fill="#ffffff" opacity=".7">
+          <circle cx="86" cy="350" r="6"/>
+          <circle cx="420" cy="200" r="8"/>
+          <circle cx="360" cy="110" r="5"/>
+          <circle cx="140" cy="500" r="7"/>
+        </g>
+      </svg>
+      <div class="portrait-note">
+        <b>御梦子</b>
+        <small>主理人 / 导演 / 出镜</small>
+      </div>
+    </div>
+    <div class="about-body reveal">
+      <span class="sec-label">About the creator</span>
+      <h2>把 JK 柚子般清甜的日常，拍成可以反复回看的片段</h2>
+      <p>
+        御梦子是「心糖vlog」的主理人，也是镜头前那个总会为一片云停下来的人。
+        她相信影像不必宏大，一段傍晚的风、一杯加了双份糖的柠檬茶，都足够构成一集完整的情绪。
+      </p>
+      <p>
+        频道从最初用手机拍下的三分钟散步开始，逐渐长成今天有固定栏目、有剪辑团队、
+        有稳定社区共创的影像节目。<strong>JK 柚子</strong>在这里不是某个单一代名词，
+        而是一种轻盈又不敷衍的生活态度——酸甜刚好，余味干净。
+      </p>
+      <p>
+        每一集视频都坚持实拍、真实收音与手工调色；每一条留言都会在周末被认真读完。
+        我们希望观众关掉播放器之后，仍愿意走出门，去记录属于自己的那一小段光。
+      </p>
+      <div class="fact-list">
+        <div class="fact"><b>2019</b><span>频道创立年份</span></div>
+        <div class="fact"><b>每周三 / 六</b><span>固定更新节奏</span></div>
+        <div class="fact"><b>28 座城市</b><span>已拍摄取景地</span></div>
+        <div class="fact"><b>常年招募</b><span>社区共创投稿</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 最新视频 ======= -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">Latest uploads</span>
+      <h2>最新影像：最近的甜，都在这几集里</h2>
+      <p>从晨间散步到深夜食堂，御梦子用镜头把一周切成若干小块，每块都保留原味。</p>
+    </div>
+    <div class="video-grid">
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd3e0"/><stop offset="1" stop-color="#ffb4cb"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t1)"/>
+            <circle cx="370" cy="70" r="52" fill="#fff" opacity=".55"/>
+            <path d="M0 240 Q120 190 240 240 T480 230 V300 H0Z" fill="#fff" opacity=".35"/>
+            <rect x="60" y="120" width="70" height="120" rx="14" fill="#fff" opacity=".7"/>
+            <rect x="150" y="90" width="90" height="150" rx="16" fill="#fff" opacity=".55"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">18:42</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">城市散步</span>
+          <h3>JK 柚子味的夏日午后：一条街的三种光线</h3>
+          <p>从便利店门口到旧书店二楼，御梦子用一下午记录同一条街道在三种自然光下的表情。</p>
+          <div class="vfoot"><span>2024 · 第 214 集</span><span class="views">86.4 万播放</span></div>
+        </div>
+      </article>
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#c6f0e6"/><stop offset="1" stop-color="#9fe3d0"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t2)"/>
+            <circle cx="120" cy="90" r="46" fill="#fff" opacity=".6"/>
+            <path d="M0 210 Q150 150 300 210 T480 200 V300 H0Z" fill="#fff" opacity=".4"/>
+            <rect x="300" y="110" width="90" height="130" rx="18" fill="#fff" opacity=".65"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">12:08</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">甜点企划</span>
+          <h3>给心糖频道做一块蛋糕：糖量与心意的配比</h3>
+          <p>御梦子第一次挑战镜面蛋糕，失败两次之后终于找到了那个刚好不腻的甜度。</p>
+          <div class="vfoot"><span>2024 · 第 213 集</span><span class="views">54.1 万播放</span></div>
+        </div>
+      </article>
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t3" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe0ea"/><stop offset="1" stop-color="#f7c2d4"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t3)"/>
+            <circle cx="240" cy="150" r="88" fill="#fff" opacity=".4"/>
+            <circle cx="240" cy="150" r="52" fill="#fff" opacity=".6"/>
+            <path d="M0 250 Q160 210 320 250 T480 244 V300 H0Z" fill="#fff" opacity=".35"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">22:30</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">换装记录</span>
+          <h3>三种 JK 制服 × 三个场景：把日常穿成故事</h3>
+          <p>一次关于服装与场景关系的实验，御梦子在老街区、天台与咖啡馆里完成三组造型。</p>
+          <div class="vfoot"><span>2024 · 第 212 集</span><span class="views">102 万播放</span></div>
+        </div>
+      </article>
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t4" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff3e0"/><stop offset="1" stop-color="#ffd9b3"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t4)"/>
+            <circle cx="380" cy="200" r="70" fill="#fff" opacity=".5"/>
+            <rect x="70" y="80" width="120" height="150" rx="16" fill="#fff" opacity=".55"/>
+            <path d="M0 250 Q140 210 280 250 T480 240 V300 H0Z" fill="#fff" opacity=".4"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">15:55</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">深夜食堂</span>
+          <h3>柚子气泡水与一个人的夜：宵夜也要认真摆盘</h3>
+          <p>御梦子的深夜厨房特辑，从切柚子到调制气泡水，完成一顿只属于自己的仪式感。</p>
+          <div class="vfoot"><span>2024 · 第 211 集</span><span class="views">63.7 万播放</span></div>
+        </div>
+      </article>
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t5" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dfe9ff"/><stop offset="1" stop-color="#b7c9f7"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t5)"/>
+            <circle cx="140" cy="180" r="66" fill="#fff" opacity=".5"/>
+            <circle cx="330" cy="110" r="44" fill="#fff" opacity=".6"/>
+            <path d="M0 240 Q180 200 360 240 T480 236 V300 H0Z" fill="#fff" opacity=".38"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">09:14</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">幕后花絮</span>
+          <h3>一条视频是怎么诞生的：剪辑台前的四个小时</h3>
+          <p>本期打开后期工程，展示御梦子团队如何挑选素材、配乐并确定整集的情绪走向。</p>
+          <div class="vfoot"><span>2024 · 第 210 集</span><span class="views">41.2 万播放</span></div>
+        </div>
+      </article>
+
+      <article class="vcard reveal">
+        <div class="thumb">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="t6" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe9f0"/><stop offset="1" stop-color="#ffc2d8"/>
+            </linearGradient></defs>
+            <rect width="480" height="300" fill="url(#t6)"/>
+            <circle cx="90" cy="100" r="40" fill="#fff" opacity=".6"/>
+            <path d="M180 260 Q240 120 300 260Z" fill="#fff" opacity=".5"/>
+            <path d="M260 260 Q330 140 400 260Z" fill="#fff" opacity=".4"/>
+          </svg>
+          <span class="mini-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="dur">14:26</span>
+        </div>
+        <div class="vbody">
+          <span class="vtag">社区共创</span>
+          <h3>你们的投稿，我替你们剪成了一条片</h3>
+          <p>来自社区的三百多段素材，被御梦子串成一个关于「夏天的尾巴」的合唱式短片。</p>
+          <div class="vfoot"><span>2024 · 第 209 集</span><span class="views">78.9 万播放</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= 栏目矩阵 ======= -->
+<section class="columns" id="columns">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">Program matrix</span>
+      <h2>四个固定栏目，撑起一整年的更新</h2>
+      <p>不追热点、不赶节奏，每个栏目都有自己的呼吸频率，让频道像一本可以慢慢翻的刊物。</p>
+    </div>
+    <div class="col-grid">
+      <div class="col-card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4v5l-9 4-9-4v-5z"/></svg></span>
+        <div class="num">01</div>
+        <h3>城市散步</h3>
+        <p>以步行速度丈量城市，每次只走一条街，把镜头交给风、招牌和路人。</p>
+      </div>
+      <div class="col-card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></span>
+        <div class="num">02</div>
+        <h3>甜点企划</h3>
+        <p>从不完美开始，记录一次又一次调试糖量的过程，附完整配方与失败教训。</p>
+      </div>
+      <div class="col-card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 012 2v18l-8-4-8 4V4a2 2 0 012-2z"/></svg></span>
+        <div class="num">03</div>
+        <h3>换装记录</h3>
+        <p>服装是情绪的外壳，这一栏把 JK 制服与场景、光线、音乐放在一起谈。</p>
+      </div>
+      <div class="col-card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM4 20h16v-2H4z"/></svg></span>
+        <div class="num">04</div>
+        <h3>社区共创</h3>
+        <p>观众投稿、联合剪辑、主题征片，把频道变成一片开放的小小创作社区。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 数据带 ======= -->
+<div class="stats-band">
+  <div class="wrap stats-inner">
+    <div class="s reveal"><b>128万+</b><span>频道订阅者</span></div>
+    <div class="s reveal"><b>460+</b><span>累计原创视频</span></div>
+    <div class="s reveal"><b>3.2亿</b><span>全平台播放</span></div>
+    <div class="s reveal"><b>96%</b><span>社区好评率</span></div>
+  </div>
+</div>
+
+<!-- ======= 社区 ======= -->
+<section class="community" id="community">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">Community voices</span>
+      <h2>社区留言：心糖频道的一半，由你们写成</h2>
+      <p>每一条留言都会被读到，其中一些还会出现在下一集视频的片尾字幕里。</p>
+    </div>
+    <div class="cmt-grid">
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#ff8fb1,#e85d87)">柚</div>
+          <div><b>柚子味的夏天</b><small>订阅 3 年</small></div>
+        </div>
+        <p>看御梦子的视频会突然想出门走走。上周照着她的散步路线走了一遍，第一次认真看了街角那家旧书店。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>1.2k</span>
+      </div>
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#9fe3d0,#3fbfa1)">梦</div>
+          <div><b>梦游的剪辑师</b><small>订阅 2 年</small></div>
+        </div>
+        <p>很喜欢频道里的手工调色，甜但不腻。已经临摹了三期的转场节奏，作为学生党的学习素材非常友好。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>986</span>
+      </div>
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#ffc2d8,#e85d87)">糖</div>
+          <div><b>半糖主义者</b><small>订阅 4 年</small></div>
+        </div>
+        <p>最喜欢甜点企划。看别人失败两次再成功，比看完美的成品片更有勇气，这大概就是心糖的味道。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>1.5k</span>
+      </div>
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#b7c9f7,#6f8fe0)">路</div>
+          <div><b>路过城市的人</b><small>订阅 1 年</small></div>
+        </div>
+        <p>异地打工的第三年，靠每周六晚上的更新撑着。城市散步系列让我觉得，陌生的地方也可以被慢慢熟悉。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>764</span>
+      </div>
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#ffd3e0,#ff8fb1)">子</div>
+          <div><b>御梦子的同城粉丝</b><small>订阅 3 年</small></div>
+        </div>
+        <p>共创征片投了两次，第二次被选中放进片尾，激动了一个晚上。这个频道是真的会认真看投稿。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>2.1k</span>
+      </div>
+
+      <div class="cmt reveal">
+        <div class="cmt-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#ffe0a3,#f2b53c)">光</div>
+          <div><b>追光的学生</b><small>订阅 2 年</small></div>
+        </div>
+        <p>换装记录那期给了我很多造型灵感，但我更喜欢御梦子在片尾说的那句：穿得开心比穿得正确重要。</p>
+        <span class="likes"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>1.1k</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= 订阅 ======= -->
+<section class="subscribe" id="subscribe">
+  <div class="wrap">
+    <div class="sub-box reveal">
+      <h2>把每周的那一点点甜，送进你的收件箱</h2>
+      <p>订阅「心糖vlog」更新提醒，第一时间收到御梦子的新片通知、幕后手记与社区共创招募。</p>
+      <form class="sub-form" id="subForm" novalidate>
+        <input type="email" id="subEmail" placeholder="请输入你的邮箱地址" aria-label="邮箱地址" required>
+        <button type="submit">订阅更新</button>
+      </form>
+      <div class="sub-msg" id="subMsg" role="status"></div>
+      <p class="sub-hint">我们尊重你的时间与隐私，仅发送频道更新，随时可一键退订。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======= 页脚 ======= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top"><i class="dot"></i><span>心糖<b>vlog</b></span></a>
+        <p>御梦子主理的甜系生活影像频道。记录城市、甜点、换装与四季，也记录每一个愿意慢下来的你。</p>
+        <div class="socials">
+          <a href="#" aria-label="视频平台"><svg viewBox="0 0 24 24"><path d="M10 8l6 4-6 4z"/></svg></a>
+          <a href="#" aria-label="社区"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/></svg></a>
+          <a href="#" aria-label="音乐"><svg viewBox="0 0 24 24"><path d="M9 18a3 3 0 10-3-3v3h3zm0-6l9-2v7a3 3 0 11-2-2.8V8l-7 1.6z"/></svg></a>
+          <a href="#" aria-label="图片"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zm2 12l4-5 3 4 3-3 2 4z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>频道内容</h4>
+        <a href="#videos">最新影像</a>
+        <a href="#columns">栏目矩阵</a>
+        <a href="#about">关于御梦子</a>
+        <a href="#subscribe">更新提醒</a>
+      </div>
+      <div class="fcol">
+        <h4>参与共创</h4>
+        <a href="#community">社区留言</a>
+        <a href="#community">投稿通道</a>
+        <a href="#community">联合剪辑</a>
+        <a href="#community">主题征片</a>
+      </div>
+      <div class="fcol">
+        <h4>联系与合作</h4>
+        <a href="mailto:hello@xintang-vlog.cn">hello@xintang-vlog.cn</a>
+        <a href="#">商务合作</a>
+        <a href="#">媒体资料</a>
+        <a href="#">使用条款</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 心糖vlog · 御梦子影像工作室 保留所有权利</span>
+      <span>用镜头记录轻盈日常 · JK 柚子般清甜</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  if (burger && navLinks) {
+    burger.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+    });
+    navLinks.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') navLinks.classList.remove('open');
+    });
+  }
+
+  /* 滚动显现 */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  /* 订阅表单 */
+  var form = document.getElementById('subForm');
+  var email = document.getElementById('subEmail');
+  var msg = document.getElementById('subMsg');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var value = (email.value || '').trim();
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+      if (!ok) {
+        msg.textContent = '邮箱格式好像不太对，再检查一下～';
+        msg.style.color = '#fff6f8';
+        email.focus();
+        return;
+      }
+      msg.textContent = '订阅成功！下一集更新时，我们会第一时间通知你。';
+      msg.style.color = '#ffffff';
+      email.value = '';
+    });
+  }
+
+  /* 播放按钮轻交互 */
+  var playBtn = document.querySelector('.play-btn');
+  if (playBtn) {
+    playBtn.addEventListener('click', function(){
+      playBtn.style.transform = 'scale(.9)';
+      setTimeout(function(){ playBtn.style.transform = ''; }, 160);
+    });
+  }
+
+  /* 导航平滑滚动补偿固定头部 */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 76;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+
+</body>
+          </html>
